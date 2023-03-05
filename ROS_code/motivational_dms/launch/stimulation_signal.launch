@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <arg name="robot" default="/"/>
+	<group ns="$(arg robot)">
+
+		<!-- Touch Stimulation Signal  -->
+		<node name="stimulation_signal" pkg="motivational_dms" type="stimulation_signal.py" output="screen">
+		</node>
+
+	</group>
+
+</launch>

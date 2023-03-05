@@ -1,0 +1,43 @@
+# List of different emotional robot profile used for simulation
+
+profile:
+
+  - id: "neutral"
+    internal: 0.5
+    external: 0.5
+    wellbeing: 1
+    user_presence: 0.33
+    user_answers: 0.33
+    touch_stimulus: 0.34
+
+  - id: "selfish"
+    internal: 1
+    external: 0
+    wellbeing: 1
+    user_presence: 0.33
+    user_answers: 0.33
+    touch_stimulus: 0.34
+
+  - id: "mostly_selfish"
+    internal: 0.75
+    external: 0.25
+    wellbeing: 1
+    user_presence: 0.33
+    user_answers: 0.33
+    touch_stimulus: 0.34
+
+  - id: "mostly_dependent"
+    internal: 0.25
+    external: 0.75
+    wellbeing: 1
+    user_presence: 0.33
+    user_answers: 0.33
+    touch_stimulus: 0.34
+
+  - id: "dependent"
+    internal: 0
+    external: 1
+    wellbeing: 1
+    user_presence: 0.33
+    user_answers: 0.33
+    touch_stimulus: 0.34

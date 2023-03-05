@@ -1,0 +1,173 @@
+# List of available behaviors and its effects over homeostatic variables -- Endogenous
+
+behavior:
+
+  - behavior: sleeping
+    type: consumatory
+    related_motivations: [rest]
+    cancel: True
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: +0.5
+    requisites: null
+    express_emotion: False
+
+  - behavior: request_interaction
+    type: appetitive
+    related_motivations: [interaction]
+    cancel: False
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.3
+      - homeostatic_variable: social_need
+        type: continuous
+        value: +0.5
+    requisites:
+      user_near: True
+      user_presence: True
+      user_far: False
+    express_emotion: False
+
+  - behavior: find_user
+    type: appetitive
+    related_motivations: ["no_motivation", "interaction", "play"]
+    cancel: True
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.1
+    requisites:
+      user_near: False
+      user_presence: True
+      user_far: False
+    express_emotion: True
+
+  - behavior: approach_user
+    type: appetitive
+    related_motivations: ["interaction", "play"]
+    cancel: True
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.3
+    requisites:
+      user_near: False
+      user_presence: True
+      user_far: True
+    express_emotion: False
+
+  - behavior: wander
+    type: appetitive
+    related_motivations: ["no_motivation"]
+    cancel: True
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.4
+    requisites: null
+    express_emotion: True
+
+  - behavior: play_alone
+    type: consumatory
+    related_motivations: ["play", "interaction"]
+    cancel: True
+    effects:
+      - homeostatic_variable: entertain
+        type: continuous
+        value: +0.5
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.5
+      - homeostatic_variable: social_need
+        type: continuous
+        value: +0.1
+    requisites:
+      user_near: False
+      user_presence: False
+      user_far: False
+    express_emotion: True
+
+  - behavior: play_game
+    type: consumatory
+    related_motivations: ["play"]
+    cancel: False
+    effects:
+      - homeostatic_variable: entertain
+        type: continuous
+        value: +1.5
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.4
+      - homeostatic_variable: social_need
+        type: continuous
+        value: +0.3
+    requisites:
+      user_near: True
+      user_presence: True
+      user_far: False
+    express_emotion: False
+
+
+## Behaviors related to emotional expressions
+
+  - behavior: express_calmness
+    type: emotional
+    related_motivations: ["no_motivation"]
+    cancel: True
+    probability: 0.4
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.2
+    requisites: null
+    express_emotion: False
+
+  - behavior: express_joy
+    type: emotional
+    related_motivations: ["no_motivation"]
+    cancel: True
+    probability: 0.5
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.3
+    requisites: null
+    express_emotion: False
+
+  - behavior: express_sadness
+    type: emotional
+    related_motivations: ["no_motivation"]
+    cancel: True
+    probability: 0.2
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.3
+    requisites: null
+    express_emotion: False
+
+  - behavior: express_surprise
+    type: emotional
+    related_motivations: ["no_motivation"]
+    cancel: False
+    probability: 1
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.3
+    requisites: null
+    express_emotion: False
+
+  - behavior: express_anger
+    type: emotional
+    related_motivations: ["no_motivation"]
+    cancel: False
+    probability: 0.3
+    effects:
+      - homeostatic_variable: tiredness
+        type: continuous
+        value: -0.6
+    requisites: null
+    express_emotion: False

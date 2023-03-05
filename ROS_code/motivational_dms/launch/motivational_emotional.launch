@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<launch>
+	<arg name="robot" default="/"/>
+	<arg name="simulation" default="False"/>
+	<arg name="adaptation" default="False"/>
+
+	<!-- EMOTIONS -->
+	<include file="$(find motivational_dms)/launch/emotions.launch">
+		<arg name="robot" value="$(arg robot)" />
+		<arg name="adaptation" value="$(arg adaptation)" />
+	</include>
+
+	<!-- MOTIVATIONS -->
+	<include file="$(find motivational_dms)/launch/motivation_manager.launch">
+		<arg name="robot" value="$(arg robot)" />
+	</include>
+
+	<!-- STIMULATION SIGNAL -->
+	<include file="$(find motivational_dms)/launch/stimulation_signal.launch">
+		<arg name="robot" value="$(arg robot)" />
+	</include>
+
+	<!-- DMS AND BEHAVIOR MANAGER -->
+	<include file="$(find motivational_dms)/launch/miro_dms.launch">
+		<arg name="robot" value="$(arg robot)" />
+		<arg name="simulate" value="$(arg simulation)" />
+	</include>
+
+	<group if="$(arg simulation)">
+	  
+	    <!-- SIMULATION MANAGER -->
+	    <include file="$(find motivational_dms)/launch/simulation.launch">
+	    	<arg name="robot" value="$(arg robot)" />
+	    </include>
+
+	</group>
+
+</launch>

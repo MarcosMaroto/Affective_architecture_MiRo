@@ -1,0 +1,33 @@
+# List of drives of Miro
+
+homeostatic_variables:
+
+  - variable_name: tiredness
+    value: 100.0
+    ideal_value: 100.0
+    initial_value: 100.0
+    min_value: 0.0
+    max_value: 100.0
+    variation_value: -0.2
+    satisfaction_time: 20.0
+    satisfied: False
+
+  - variable_name: entertain
+    value: 100.0
+    ideal_value: 100.0
+    initial_value: 100.0
+    min_value: 0.0
+    max_value: 100.0
+    variation_value: -0.4
+    satisfaction_time: 20.0
+    satisfied: False
+
+  - variable_name: social_need
+    value: 100.0
+    ideal_value: 100.0
+    initial_value: 100.0
+    min_value: 0.0
+    max_value: 100.0
+    variation_value: -0.3
+    satisfaction_time: 20.0
+    satisfied: False

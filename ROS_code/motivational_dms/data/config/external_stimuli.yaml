@@ -1,0 +1,39 @@
+# Extenal stimuli that affects Miro's Motivations
+
+external_stimulus:
+
+  - stimulus: balls
+    value_type: variable
+    affected_motivations: ["play"]
+    active: False
+    value: 0.0
+    alpha: 0.3
+
+  - stimulus: user_presence
+    value_type: variable
+    affected_motivations: ["interaction", "play"]
+    active: False
+    value: 0.0
+    alpha: 0.5
+
+  - stimulus: lights
+    value_type: variable
+    affected_motivations: ["rest"]
+    active: False
+    value: 0.0
+    alpha: 0.5
+
+  - stimulus: user_near
+    value_type: 0
+    affected_motivations: []
+    active: False
+    value: 0.0
+    alpha: 0.0
+
+  - stimulus: user_far
+    value_type: 0
+    affected_motivations: []
+    active: False
+    value: 0.0
+    alpha: 0.0
+

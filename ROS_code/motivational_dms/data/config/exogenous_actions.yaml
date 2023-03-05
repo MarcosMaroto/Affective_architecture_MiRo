@@ -1,0 +1,12 @@
+# External actions performed by the objects/agents -- Exogenous
+
+
+exogenous_actions:
+
+  - action: touch
+    agent_object: user
+    type: consumatory
+    related_homeostatic_variables: [social_need]
+    effect:
+      type: punctual
+      value: variable

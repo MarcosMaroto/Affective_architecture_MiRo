@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <arg name="robot" default="/"/>
+	<group ns="$(arg robot)">
+
+		<!-- Kinect launcher -->
+		<include file="$(find openni_launch)/launch/openni.launch">
+    		<arg name="device_id" value="#2"/>
+		</include>
+
+		<!-- Face detection node -->
+		<include file="$(find opencv_apps)/launch/face_detection.launch">
+    		<arg name="image" value="camera/rgb/image_rect_color"/> 
+    		<!--<arg name="image" value="miro/rob01/platform/caml"/> -->
+    		<arg name="debug_view" value="false"/>
+		</include>
+
+		<!-- Head pose launcher 
+		<include file="$(find head_pose_estimation)/launch/estimator.launch">
+			<arg name="filter_pose" value="true"/>
+		</include>  -->
+
+		<!-- Color detection node -->
+		<node name="color_detection" pkg="miro_perception_manager" type="color_detection.py" output="screen"/> 
+
+		<!-- Detect user position node -->
+		<node name="detect_position" pkg="miro_perception_manager" type="detect_position.py" output="screen"/> 
+
+		<!-- User detector  -->
+		<node name="user_detection" pkg="miro_perception_manager" type="user_detector.py" output="screen"/> 
+
+		<!-- Perception Manager -->
+		<node name="perception_manager" pkg="miro_perception_manager" type="perception_manager.py" output="screen"/> 
+
+	</group>
+
+</launch>

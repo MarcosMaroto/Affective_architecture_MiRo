@@ -1,0 +1,23 @@
+# List of motivations of Miro
+
+motivations:
+
+  - motivation_name: no_motivation
+    value: 1.0
+    activation_value: 0.0
+    related_homeostatic_variables: []
+  
+  - motivation_name: rest
+    value: 0.0
+    activation_value: 30.0
+    related_homeostatic_variables: ["tiredness"]
+
+  - motivation_name: play
+    value: 0.0
+    activation_value: 30.0
+    related_homeostatic_variables: ["entertain"]
+
+  - motivation_name: interaction
+    value: 0.0
+    activation_value: 30.0
+    related_homeostatic_variables: ["social_need"]

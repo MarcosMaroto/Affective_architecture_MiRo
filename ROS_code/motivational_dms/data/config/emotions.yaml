@@ -1,0 +1,82 @@
+# File containing all emotions and their config params
+
+emotions:
+
+  - emotion: calmness
+    range: [40, 60]
+    variation: 0
+    intensity: 0.5
+    min_intensity: 0
+    max_intensity: 100
+    decrement_factor: -0.2
+    threshold: 0
+    ideal_value: 50
+    gestures_factor: 0
+    probability: 0
+    time_factor: 0
+    color:
+      - [0, 0, 0]
+
+  - emotion: joy
+    range: [60, 100]
+    variation: 0
+    intensity: 0.0
+    min_intensity: 0
+    max_intensity: 100
+    decrement_factor: -0.2
+    threshold: 20
+    ideal_value: 100
+    gestures_factor: 0.1
+    probability: 0.2
+    time_factor: -0.2
+    color:
+      - [255, 100, 0]
+
+  - emotion: sadness
+    range: [0, 40]
+    variation: 0
+    intensity: 0
+    min_intensity: 0
+    max_intensity: 100
+    decrement_factor: -0.2
+    threshold: 20
+    ideal_value: 0
+    gestures_factor: -0.2
+    probability: -0.2
+    time_factor: +1.0
+    color: 
+      - [0, 0, 255]
+
+  # - emotion: anger
+  #   range: [0, 80]
+  #   variation: -5
+  #   intensity: 0
+  #   min_intensity: 0
+  #   max_intensity: 110
+  #   decrement_factor: -0.05
+  #   threshold: 20
+  #   ideal_value: null
+  #   gestures_factor: 0.2
+  #   probability: 0.2
+  #   time_factor: 0
+  #   color:
+  #     - [255, 0, 0]
+
+  - emotion: surprise
+    range: [10, 100]
+    variation: 5
+    intensity: 0
+    min_intensity: 0
+    max_intensity: 110
+    decrement_factor: -0.5
+    threshold: 20
+    ideal_value: null
+    gestures_factor: 0
+    probability: 0.3
+    time_factor: 0
+    color:
+      - [0, 255, 255]
+
+
+
+

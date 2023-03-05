@@ -1,0 +1,16 @@
+## Params that configurate the signal which have influence over the emotional state
+
+
+params:
+
+  - signal: wellbeing 
+    type: internal
+
+  - signal: user_presence 
+    type: external
+
+  - signal: user_answers 
+    type: external
+
+  - signal: touch_stimulus 
+    type: external

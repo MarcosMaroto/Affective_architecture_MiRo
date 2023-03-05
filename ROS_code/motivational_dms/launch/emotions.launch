@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <arg name="robot" default="/"/>
+    <arg name="adaptation" default="False"/>
+	<group ns="$(arg robot)">
+
+		<!-- Emotion Manager  -->
+		<node name="emotion_manager" pkg="motivational_dms" type="emotion_manager.py" output="screen">
+			<param name="adaptation" value="$(arg adaptation)" />  
+		</node>
+
+	</group>
+
+</launch>
